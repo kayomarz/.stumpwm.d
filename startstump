@@ -1,0 +1,4 @@
+;; StumpWM with SLIME:
+;; https://www.kaashif.co.uk/2015/06/28/hacking-stumpwm-with-common-lisp/
+(require :stumpwm)
+(stumpwm:stumpwm)

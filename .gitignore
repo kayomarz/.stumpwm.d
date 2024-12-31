@@ -1,3 +1,5 @@
+*stumpwm.log
+*stumpwm.log.*
 *.FASL
 *.fasl
 *.lisp-temp
