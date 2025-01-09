@@ -27,7 +27,7 @@
   (run-or-raise "thunar" '(:class "Thunar")))
 
 (defcommand run-or-raise-firefox () ()
-  (run-or-raise "firefox" '(:class "Firefox")))
+  (run-or-raise "firefox" '(:class "firefox-esr")))
 
 (defcommand run-or-raise-chrome () ()
   (run-or-raise "google-chrome" '(:class "Google-chrome")))
