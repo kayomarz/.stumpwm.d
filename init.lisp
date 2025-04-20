@@ -56,7 +56,12 @@
 (define-key *top-map* (kbd "XF86AudioMute") "toggle-mute")
 
 (defun pamixer (&rest strings)
-  (run-shell-command (format nil "pamixer ~{~A~^ ~}" strings) t))
+  (let* ((stdout
+           (run-shell-command (format nil "pamixer ~{~A~^ ~}" strings) t))
+         (ok (> (length stdout) 0)))
+    (if ok
+        stdout
+        (error "Could not run pamixer, make sure it is installed"))))
 
 (defcommand vol+ () ()
   (message "Volume ~A"
